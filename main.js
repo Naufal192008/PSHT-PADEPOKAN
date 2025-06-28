@@ -237,3 +237,57 @@ document.addEventListener('DOMContentLoaded', function() {
         // sesuai dengan bulan dan tahun yang dipilih
     }
 });
+
+ // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Toggle answer
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+         function kembaliKeHalamanAwal() {
+            
+            //Alternatif jika ingin ke halaman tertentu:
+             window.location.href = "index.html";
+        }
+
+        // Mobile Navigation
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('active');
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Form Validation
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            const checkbox = document.getElementById('persetujuan');
+            if (!checkbox.checked) {
+                e.preventDefault();
+                alert('Anda harus menyetujui syarat dan ketentuan');
+                checkbox.focus();
+            }
+        });
