@@ -1880,9 +1880,9 @@ img {
 }
 
 .org-subname {
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #666;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #313131;
     text-transform: uppercase;
 }
 
@@ -2024,7 +2024,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(188, 178, 178, 0.85);
     z-index: 2;
 }
 
@@ -2050,7 +2050,7 @@ img {
     color: #333;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .org-subname {
@@ -2151,9 +2151,7 @@ img {
     box-shadow: 0 7px 14px rgba(0,0,0,0.15);
 }
 
-.hero-cta:hover svg {
-    transform: translateX(3px);
-}
+
 
 /* Animation */
 @keyframes fadeIn {
